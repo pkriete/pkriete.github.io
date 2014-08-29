@@ -4,6 +4,7 @@ email: mail@pascal.io
 
 # Build settings
 permalink: /:title
+excerpt_separator: "\n\n\n"
 
 kramdown:
   input: GFM
