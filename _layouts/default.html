@@ -34,14 +34,14 @@
     {% else %}
       <div class="menu {% if page.show_menu == false %}mobile-only{% endif %}">
         <a class="search-flag" onclick="showSearch();" href="#"> <i class="fa fa-search"></i></a>
-        <a href="/about"> About</a>
-        <a href="/contact"> Contact</a>
+        <a href="/about/"> About</a>
+        <a href="/contact/"> Contact</a>
         <a href="https://github.com/pkriete"> <i class="fa fa-github"></i> Code</a>
       </div>
     {% endif %}
 
 
-    <form action="/search" method="get">
+    <form action="/search/" method="get">
       <a href="#" onclick="hideSearch();"> <i class="fa fa-close"></i></a>
       <input type="search" name="q" placeholder="Search">
       <a href="#" onclick="doSearch();"> <i class="fa fa-check"></i></a>
