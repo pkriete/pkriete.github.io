@@ -1,0 +1,63 @@
+@media screen and (max-width: 568px) {
+
+  header,
+  main {
+    padding: 0 15px;
+    width: 100% !important;
+  }
+
+  header {
+    margin: 8px auto 40px auto;
+    line-height: 2.4;
+    text-align: center;
+
+    form {
+      display: none;
+      background: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      a {
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      input[type="search"] {
+        width: 60%;
+        font-size: 16px;
+        -webkit-appearance: none;
+      }
+    }
+
+    .search-flag {
+      display: inline-block;
+    }
+
+    .detail,
+    .menu,
+    .mobile-only {
+      display: block;
+    }
+
+    .detail .dash {
+      display: none;
+    }
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4, h5, h6 {
+    font-size: 16px;
+  }
+}
