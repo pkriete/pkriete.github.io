@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  {% if page.no_index %}
+  <meta name="robots" content="noindex, nofollow">
+  {% endif %}
+  <title>{% if page.title %}{{ page.title }}{% else %}pascal.io{% endif %}</title>
+
+  <link href="/css/main.css" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+
+    <div class="logo">
+      {% if page.title %}
+        <a href="/" class="inactive"><i class="fa fa-home"></i></a>
+        / {{ page.title }}
+      {% else %}
+        <a href="#" class="active">
+          <i class="fa fa-home"></i>
+          <b>pascal</b>.io
+        </a>
+      {% endif %}
+    </div>
+
+    {% if page.date %}
+      <div class="detail">
+        <span class="dash">&ndash;</span> <span class="date">{{ page.date | date_to_string}}</span>
+      </div>
+    {% else %}
+      <div class="menu {% if page.show_menu == false %}mobile-only{% endif %}">
+        <a class="search-flag" onclick="showSearch();" href="#"> <i class="fa fa-search"></i></a>
+        <a href="/about"> About</a>
+        <a href="#"> Contact</a>
+        <a href="#"> <i class="fa fa-github"></i> Code</a>
+      </div>
+    {% endif %}
+
+
+    <form action="/search" method="get">
+      <a href="#" onclick="hideSearch();"> <i class="fa fa-close"></i></a>
+      <input type="search" name="q" placeholder="Search">
+      <a href="#" onclick="doSearch();"> <i class="fa fa-check"></i></a>
+    </form>
+
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>&copy; 2014 Pascal Kriete</footer>
+
+  <script>
+  var form = document.getElementsByTagName('form')[0];
+
+  function showSearch() {
+    form.q.focus();
+    form.style.display = "block";
+  }
+
+  function hideSearch() {
+    form.style.display = "";
+  }
+
+  function doSearch() {
+    form.submit();
+  }
+  </script>
+</body>
+</html>
