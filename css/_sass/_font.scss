@@ -1,0 +1,26 @@
+// Fontello subset of fontawesome
+@font-face {
+  font-family: 'pio';
+  src: url('/fonts/pio.eot?30451909');
+  src: url('/fonts/pio.eot?30451909#iefix') format('embedded-opentype'),
+       url('/fonts/pio.woff?30451909') format('woff'),
+       url('/fonts/pio.ttf?30451909') format('truetype'),
+       url('/fonts/pio.svg?30451909#pio') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 pio;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-home:before { content: '\e800'; }
+.fa-github:before { content: '\e801'; }
+.fa-check:before { content: '\e802'; }
+.fa-close:before { content: '\e803'; }
+.fa-search:before { content: '\e804'; }
