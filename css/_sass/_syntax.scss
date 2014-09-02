@@ -1,0 +1,87 @@
+// Syntax highlighting
+
+p code {
+  background: rgb(237, 240, 243);
+  color: #000;
+  padding: 0 2px;
+}
+
+.highlight {
+  border-left: 2px solid rgb(237, 240, 243);
+  padding: 0 10px;
+  border-radius: 3px;
+
+  .ge { font-style: italic } // Generic.Emph
+
+  .sr { color: #009922 } // Literal.String.Regex
+
+  .ni, // Name.Entity
+  .nt { color: #000088 } // Name.Tag
+
+  .w, // Text.Whitespace
+  .go, // Generic.Output
+  .gh, // Generic.Heading
+  .bp { color: #999999 } // Name.Builtin.Pseudo
+
+  .gr, // Generic.Error
+  .err, // Error
+  .gt { color: #aa0000 } // Generic.Traceback
+
+  .gp, // Generic.Prompt
+  .nn { color: #555555 } // Name.Namespace
+
+  .c, // Comment
+  .cm, // Comment.Multiline
+  .cp, // Comment.Preproc
+  .cs, // Comment.Special
+  .c1, // Comment.Single
+  .gu { color: #aaaaaa } // Generic.Subheading
+
+  .o, // Operator
+  .no, // Name.Constant
+  .gd, // Generic.Deleted
+  .gi, // Generic.Inserted
+  .gi .x, // Generic.Inserted.Specific
+  .gd .x { color: #000000 } // Generic.Deleted.Specific
+
+  .na, // Name.Attribute
+  .nc, // Name.Class
+  .ne, // Name.Exception
+  .nf, // Name.Function
+  .nv, // Name.Variable
+  .vc, // Name.Variable.Class
+  .vg, // Name.Variable.Global
+  .vi { color: #111 } // Name.Variable.Instance
+
+
+  .ow, // Operator.Word
+  .gs, // Generic.Strong
+  .kc, // Keyword.Constant
+  .kd, // Keyword.Declaration
+  .kt, // Keyword.Type
+  .kp { font-weight: bold } // Keyword.Pseudo
+
+  .k, // Keyword
+  .kr { color: $code-pink } // Keyword.Reserved
+
+  .nb, // Name.Builtin
+  .il { color: $code-purple } // Literal.Number.Integer.Long
+
+  .m, // Literal.Number
+  .mf, // Literal.Number.Float
+  .mh, // Literal.Number.Hex
+  .mi, // Literal.Number.Integer
+  .mo { color: $code-blue } // Literal.Number.Oct
+
+  .s, // Literal.String
+  .sb, // Literal.String.Backtick
+  .sc, // Literal.String.Char
+  .sd, // Literal.String.Doc
+  .s2, // Literal.String.Double
+  .se, // Literal.String.Escape
+  .sh, // Literal.String.Heredoc
+  .si, // Literal.String.Interpol
+  .ss, // Literal.String.Symbol
+  .sx, // Literal.String.Other
+  .s1 { color: $code-green } // Literal.String.Single
+}
