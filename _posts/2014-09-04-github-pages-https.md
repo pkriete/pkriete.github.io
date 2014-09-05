@@ -1,6 +1,6 @@
 ---
 title:  "SSL for Github Pages"
-date:   2014-08-27 20:21:52
+date:   2014-09-04 22:22:22
 color:  pink
 ---
 
