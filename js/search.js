@@ -9,22 +9,21 @@ function Search()
 }
 
 Search.prototype = {
-  _wordRegex: new RegExp('\\W+,g'),
 
+  // Add to the term to the given frequency maps
   _add: function(words, maps) {
     var length = words.length,
-      num_maps = maps.length,
-      insertions = [],
-      word = '',
-      _map;
+        num_maps = maps.length,
+        insertions = [],
+        word = '',
+        _map;
 
     for (var j = 0; j < num_maps; j++) {
       _map = maps[j];
       insertions[j] = 0;
 
       for (var i = 0; i < length; i++) {
-        word = words[i].replace(this._wordRegex, '');
-        word = stemmer(word);
+        word = stemmer(words[i]);
 
         if (word in _map) {
           _map[word]++;
@@ -38,6 +37,7 @@ Search.prototype = {
     return insertions;
   },
 
+  // word count in doc / unique words in doc
   _rank: function(map, weight) {
     for (word in map) {
       map[word] /= weight;
@@ -61,11 +61,11 @@ Search.prototype = {
 
   doSearch: function(search) {
     var matches = [],
-      max_results = 10,
-      search_terms = {},
-      length = this.documents.length,
-      docWords, titleWords,
-      term, score;
+        max_results = 10,
+        search_terms = {},
+        length = this.documents.length,
+        docWords, titleWords,
+        term, score;
 
     this._rank(
       search_terms,
@@ -123,6 +123,8 @@ SearchPage = {
       // yuck
       if (results.length) {
         SearchPage.buildResultRow(results);
+      } else {
+        document.querySelector('.green').className = 'red';
       }
     }
 
@@ -155,7 +157,7 @@ SearchPage = {
 
     for (i = 0; i < results.length; i++) {
       var fragment = document.createElement('div');
-          fragment.innerHTML = '<article><h2><a></a></h2></article>'
+          fragment.innerHTML = '<article><ul><li><a></a></li></ul></article>'
 
       var a = fragment.getElementsByTagName('a')[0];
       a.href = results[i][0];
