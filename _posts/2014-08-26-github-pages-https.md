@@ -88,6 +88,8 @@ Including the `updating` key in `proxy_cache_use_stale` means that most requests
 
 The final server setup is one application and one config file. Back up `nginx.conf` and the only maintenance you will ever do is refresh your certificate when it expires. No debugging, no fear of missing a backup, and it's a simple `git push` to publish.
 
+Happy encrypted publishing!
+
 [^encrypt-the-web]: Electronic Frontier Foundation: [Encrypt the Web](https://www.eff.org/encrypt-the-web)
 [wikipedia-ssl-termination]: https://wikitech.wikimedia.org/wiki/Https#SSL_termination
 [Proxy-module-docs]: http://nginx.org/en/docs/http/ngx_http_proxy_module.html
