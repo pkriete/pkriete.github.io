@@ -2,7 +2,7 @@
 title: "Search Results"
 permalink: /search/
 no_index: true
-show_menu: false
+color: green
 ---
 
 No Results Found.

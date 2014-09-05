@@ -3,7 +3,7 @@ title: pascal.io
 email: mail@pascal.io
 
 # Build settings
-permalink: /:title
+permalink: /:title/
 excerpt_separator: "\n\n\n"
 
 kramdown:
@@ -19,4 +19,4 @@ defaults:
     path: ""
   values:
     layout: "post"
-    show_menu: true
+    color: orange

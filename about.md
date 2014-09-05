@@ -1,7 +1,7 @@
 ---
 title: About
 permalink: /about/
-show_menu: false
+color: yellow
 ---
 
 This is a work in progress.

@@ -1,7 +1,7 @@
 ---
 title: Contact
 permalink: /contact/
-show_menu: false
+color: purple
 ---
 
 This is a work in progress.

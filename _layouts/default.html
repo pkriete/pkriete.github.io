@@ -12,34 +12,19 @@
   <link href="/css/main.css" rel="stylesheet" />
 </head>
 <body>
-
-  <header>
-
+  <header class="{{ page.color }}">
     <div class="logo">
-      {% if page.title %}
-        <a href="/" class="inactive"><i class="fa fa-home"></i></a>
-        / {{ page.title }}
-      {% else %}
-        <a href="/" class="active">
-          <i class="fa fa-home"></i>
-          <b>pascal</b>.io
-        </a>
-      {% endif %}
+      <a href="/">
+        <i class="fa fa-home"></i>
+        <b>pascal</b>.io
+      </a>
     </div>
-
-    {% if page.date %}
-      <div class="detail">
-        <span class="dash">&ndash;</span> <span class="date">{{ page.date | date_to_string}}</span>
-      </div>
-    {% else %}
-      <div class="menu {% if page.show_menu == false %}mobile-only{% endif %}">
-        <a class="search-flag" onclick="showSearch();" href="#"> <i class="fa fa-search"></i></a>
-        <a href="/about/"> About</a>
-        <a href="/contact/"> Contact</a>
-        <a href="https://github.com/pkriete"> <i class="fa fa-github"></i> Code</a>
-      </div>
-    {% endif %}
-
+    <div class="menu">
+      <a class="search-flag" onclick="showSearch();" href="#"> <i class="fa fa-search"></i></a>
+      <a href="/about/"> About</a>
+      <a href="/contact/"> Contact</a>
+      <a href="https://github.com/pkriete"> <i class="fa fa-github"></i> Code</a>
+    </div>
 
     <form action="/search/" method="get">
       <a href="#" onclick="hideSearch();"> <i class="fa fa-close"></i></a>
@@ -71,5 +56,7 @@
     form.submit();
   }
   </script>
+
+
 </body>
 </html>

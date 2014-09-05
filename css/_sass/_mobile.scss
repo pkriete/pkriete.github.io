@@ -7,26 +7,39 @@
   }
 
   header {
-    margin: 8px auto 40px auto;
-    line-height: 2.4;
     text-align: center;
+    padding: 0;
 
     form {
       display: none;
-      background: #fff;
       position: absolute;
-      bottom: 0;
+      padding: 12px 0 15px 0;
+      top: 58px;
       left: 0;
-
-      a {
-        display: inline-block;
-        margin: 0 10px;
-      }
+      width: 100%;
+      text-align: center;
 
       input[type="search"] {
         width: 60%;
         font-size: 16px;
         -webkit-appearance: none;
+        margin: 0;
+
+        line-height: 1.2;
+      }
+
+      a {
+        padding: 0;
+        margin: 0 10px;
+        display: inline-block;
+      }
+    }
+
+    .logo {
+      padding: 15px 0;
+
+      a {
+        margin: 0;
       }
     }
 
@@ -34,30 +47,29 @@
       display: inline-block;
     }
 
-    .detail,
-    .menu,
-    .mobile-only {
+    .menu {
       display: block;
+      padding: 20px 0;
     }
 
-    .detail .dash {
-      display: none;
+    a:active,
+    a:hover {
+      color: #000;
     }
   }
 
-  h1 {
-    font-size: 30px;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-
-  h3 {
-    font-size: 18px;
-  }
-
-  h4, h5, h6 {
-    font-size: 16px;
-  }
+  header.blue form,
+  header.blue .menu { background: $blue; }
+  header.green form,
+  header.green .menu { background: $green; }
+  header.orange form,
+  header.orange .menu { background: $orange; }
+  header.pink form,
+  header.pink .menu { background: $pink; }
+  header.purple form,
+  header.purple .menu { background: $purple; }
+  header.red form,
+  header.red .menu { background: $red; }
+  header.yellow form,
+  header.yellow .menu { background: $yellow; }
 }

@@ -17,7 +17,7 @@ html, body, input {
 
 body {
   margin: 0;
-  color: #222;
+  color: #333;
 }
 
 // Headers
@@ -28,25 +28,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 34px;
-  font-weight: 200;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 400;
   margin-bottom: 26px;
+  line-height: 32px;
+}
+
+h2, h3 {
+  font-weight: 500;
 }
 
 h2 {
-  font-size: 26px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 500;
   margin: 20px 0;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   margin: 20px 0 10px;
 }
 
 h4, h5, h6 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   margin: 20px 0 5px;
 }
@@ -93,13 +99,7 @@ input {
     border: 0;
     padding: 0;
   }
-/*
-  &[type="checkbox"],
-  &[type="radio"] {
-    box-sizing: border-box;
-    padding: 0;
-  }
-*/
+
   &[type="search"] {
     -webkit-appearance: textfield;
   }
@@ -144,7 +144,29 @@ del {
 }
 
 ins {
-  color: rgb(60, 118, 61);
   color: $green;
   text-decoration: none;
+}
+
+blockquote {
+  margin: 0 30px;
+  color: #666;
+}
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+sup:before {
+  content: "[";
+  color: #444;
+}
+
+sup:after {
+  content: "]";
+  color: #444;
 }
