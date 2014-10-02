@@ -155,16 +155,24 @@ SearchPage = {
     article.getElementsByTagName('p')[0].remove();
     article.appendChild(document.createElement('h1'));
 
-    for (i = 0; i < results.length; i++) {
-      var fragment = document.createElement('div');
-          fragment.innerHTML = '<article><ul><li><a></a></li></ul></article>'
+    var fragment = document.createElement('div');
+        fragment.innerHTML = '<article><ul><li><a></a></li></ul></article>',
+        list = fragment.getElementsByTagName('ul')[0],
+        li = list.firstChild;
 
-      var a = fragment.getElementsByTagName('a')[0];
+    list.removeChild(li);
+
+    for (i = 0; i < results.length; i++) {
+
+      var newline = li.cloneNode(true),
+          a = newline.firstChild;
       a.href = results[i][0];
       a.innerText = results[i][1];
 
-      main.appendChild(fragment.getElementsByTagName('article')[0]);
+      list.appendChild(newline);
     }
+
+    main.appendChild(fragment.getElementsByTagName('article')[0]);
   }
 };
 
