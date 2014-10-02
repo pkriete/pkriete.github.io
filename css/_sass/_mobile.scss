@@ -58,18 +58,8 @@
     }
   }
 
-  header.blue form,
-  header.blue .menu { background: $blue; }
-  header.green form,
-  header.green .menu { background: $green; }
-  header.orange form,
-  header.orange .menu { background: $orange; }
-  header.pink form,
-  header.pink .menu { background: $pink; }
-  header.purple form,
-  header.purple .menu { background: $purple; }
-  header.red form,
-  header.red .menu { background: $red; }
-  header.yellow form,
-  header.yellow .menu { background: $yellow; }
+  header .menu {
+    background: #efefef;
+    text-indent: 1px;
+  }
 }
