@@ -152,7 +152,9 @@ SearchPage = {
     var article = document.getElementsByTagName('article')[0],
         main = document.getElementsByTagName('article')[0];
 
-    article.getElementsByTagName('p')[0].remove();
+    var no_results = article.getElementsByTagName('p')[0];
+    no_results.parentNode.removeChild(no_results);
+
     article.appendChild(document.createElement('h1'));
 
     var fragment = document.createElement('div');
