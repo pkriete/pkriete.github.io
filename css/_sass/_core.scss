@@ -174,3 +174,11 @@ sup:after {
   content: "]";
   color: #444;
 }
+
+small {
+  font-size: 13px;
+
+  code {
+    font-size: 12px;
+  }
+}

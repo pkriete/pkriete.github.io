@@ -32,7 +32,7 @@ server {
 
     ssl_session_timeout  5m;
 
-    ssl_protocols        SSLv3 TLSv1 TLSv1.1 TLSv1.2;
+    ssl_protocols        TLSv1 TLSv1.1 TLSv1.2;
     ssl_ciphers          HIGH:!aNULL:!MD5;
     ssl_session_cache    shared:SSL:10m;
     ssl_prefer_server_ciphers   on;
@@ -88,9 +88,14 @@ Including the `updating` key in `proxy_cache_use_stale` means that most requests
 
 The final server setup is one application and one config file. Back up `nginx.conf` and the only maintenance you will ever do is refresh your certificate when it expires. No debugging, no fear of missing a backup, and it's a simple `git push` to publish.
 
-Happy encrypted publishing!
+Happy encrypted publishing! 
 
 [^encrypt-the-web]: Electronic Frontier Foundation: [Encrypt the Web](https://www.eff.org/encrypt-the-web)
 [wikipedia-ssl-termination]: https://wikitech.wikimedia.org/wiki/Https#SSL_termination
 [Proxy-module-docs]: http://nginx.org/en/docs/http/ngx_http_proxy_module.html
 [HSTS Wiki]: https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
+[Poodle Disclosure]: http://googleonlinesecurity.blogspot.com/2014/10/this-poodle-bites-exploiting-ssl-30.html
+
+
+
+<small class="edit">**Edit** [_October 15, 2014_]: Removed SSLv3 from `ssl_protocols` in response to [Poodle][Poodle Disclosure].</small>
