@@ -1,8 +1,12 @@
 const em = document.getElementById('em');
 
-em.onclick = () => setTimeout(() => {
-  const val = ['mail', '@', 'pascal', '.', 'io'];
+em.onclick = (e) => {
+  e.preventDefault();
+  
+  setTimeout(() => {
+    const val = ['mail', '@', 'pascal', '.', 'io'];
 
-  em.innerText = val.join('');
-  em.href = 'mailto:' + em.innerText;
-}, 10);
+    em.innerText = val.join('');
+    em.href = 'mailto:' + em.innerText;
+  }, 10);
+};
