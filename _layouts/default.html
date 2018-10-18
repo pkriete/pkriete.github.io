@@ -1,62 +1,26 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="/css/main.css" rel="stylesheet" />
+    <title>{% if page.title %}{{ page.title }}{% else %}pascal.io{% endif %}</title>
+  </head>
 
-  {% if page.no_index %}
-  <meta name="robots" content="noindex, nofollow">
-  {% endif %}
-  <title>{% if page.title %}{{ page.title }}{% else %}pascal.io{% endif %}</title>
+  <body>
+    <canvas></canvas>
+    <main>
+      {{ content }}
+    </main>
 
-  <link href="/css/main.css" rel="stylesheet" />
-</head>
-<body>
-  <header class="{{ page.color }}">
-    <div class="logo">
-      <a href="/">
-        <i class="fa fa-home"></i>
-        <b>pascal</b>.io
+    <span id="credit">
+      Animation by
+      <a href="https://codepen.io/ge1doot/details/GQobbq/">
+        Gerard Ferrandez
       </a>
-    </div>
-    <div class="menu">
-      <a class="search-flag" onclick="showSearch();" href="#"> <i class="fa fa-search"></i></a>
-      <a href="/about/"> About</a>
-      <a href="/contact/"> Contact</a>
-      <a href="https://github.com/pkriete"> <i class="fa fa-github"></i> Code</a>
-    </div>
+    </span>
 
-    <form action="/search/" method="get">
-      <a href="#" onclick="hideSearch();"> <i class="fa fa-close"></i></a>
-      <input type="search" name="q" placeholder="Search">
-      <a href="#" onclick="doSearch();"> <i class="fa fa-check"></i></a>
-    </form>
-
-  </header>
-
-  <main>
-    {{ content }}
-  </main>
-
-  <footer>&copy; 2014 Pascal Kriete</footer>
-
-  <script>
-  var form = document.getElementsByTagName('form')[0];
-
-  function showSearch() {
-    form.q.focus();
-    form.style.display = "block";
-  }
-
-  function hideSearch() {
-    form.style.display = "";
-  }
-
-  function doSearch() {
-    form.submit();
-  }
-  </script>
-
-
-</body>
+  </body>
+  <script src="/js/em.js" defer></script>
+  <script src="/js/bg.js" defer></script>
 </html>

@@ -8,8 +8,6 @@ excerpt_separator: "\n\n\n"
 
 kramdown:
   input: GFM
-coffee:
-  style: :compressed
 sass:
   sass_dir: css/_sass
   style: :compressed
@@ -18,5 +16,4 @@ defaults:
   scope:
     path: ""
   values:
-    layout: "post"
-    color: orange
+    layout: "default"
