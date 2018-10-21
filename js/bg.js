@@ -67,11 +67,11 @@ function context2d() {
 
   height = Math.max(doc.clientHeight, window.innerHeight || 0);
   width = Math.max(doc.clientWidth, window.innerWidth || 0);
-  width += 300;
+  height += 400;
+  width += 400;
 
   canvas.width = width * dpi;
   canvas.height = height * dpi;
-  canvas.style.width = width + "px";
 
   var context = canvas.getContext("2d");
   context.scale(dpi, dpi);
