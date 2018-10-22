@@ -102,7 +102,7 @@ function* create() {
 
       context.stroke();
     }
-    yield context.canvas;
+    yield;
   }
 }
 
