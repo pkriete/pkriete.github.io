@@ -111,8 +111,14 @@ function setup() {
   gen = create();
 }
 
+
+let i = 10;
 const loop = () => {
-  setTimeout(loop, 100);
+  const t = Math.sqrt(i);
+  i += 10;
+
+  setTimeout(loop, t);
+  console.info(t);
   gen.next();
 };
 

@@ -2,7 +2,7 @@ const em = document.getElementById('em');
 
 em.onclick = (e) => {
   e.preventDefault();
-  
+
   setTimeout(() => {
     const val = ['mail', '@', 'pascal', '.', 'io'];
 
