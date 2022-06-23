@@ -5,7 +5,7 @@ layout: default
 <h1>Pascal Kriete</h1>
 
 <p>
-Director of Engineering <a href="https://logrocket.com">@LogRocket</a>
+VP of Engineering <a href="https://logrocket.com">@LogRocket</a>
 </p>
 </div>
 <div id="right">
